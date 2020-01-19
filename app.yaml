@@ -1,0 +1,13 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+handlers:
+  # Serve all static files with urls ending with a file extension
+- url: /(.*\..+)$ 
+  static_files: spa/\1
+  upload: spa/(.*\..+)$  # catch all handler to index.html
+- url: /.*
+  static_files: spa/index.html
+  upload: spa/index.html  
+- url: /
+  static_dir: spa  
