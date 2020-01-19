@@ -1,8 +1,7 @@
 # quasar-vuejs-gcp
-A sample build and deply of quasar vuejs GCP(Google Cloud Platform) build and deploy. 
-Pls check build type before you use. Quasar build is default (SSR, PWA or other types for which things may vary. One may use
-
-quasar cli, vuejs brief dev env details
+A sample build in Quasar and deploy of quasar vuejs app on to GCP(Google Cloud Platform). 
+Pls check build type before you use. Quasar build is default (SSR, PWA or other types for which things may vary. I used
+quasar cli, vuejs and brief dev env details is below
         "quasar": "^1.0.0"
         "node": ">= 8.9.0",
         "npm": ">= 5.6.0",
@@ -11,7 +10,8 @@ quasar cli, vuejs brief dev env details
 Assuming quasar dev is working 
 try
 quasar build in your soruce root 
-- to build the distribution package (default spa)
+to build the distribution package (default spa)
+(I used VSCODE powershell )
 
 ------ Part 2
 login in google cloud
@@ -37,7 +37,7 @@ Upload spa folder (created from quasar build, names may be different)
 Upload a app.yaml file (spa + app.yaml on same folder level)
 
 Following is content of app.yaml file ( runtime can be nodejs10 etc, pls check GCP docs)
-
+(app.yaml available separately ) 
 "runtime: python27
 api_version: 1
 threadsafe: true
